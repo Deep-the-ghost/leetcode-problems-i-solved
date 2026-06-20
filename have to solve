@@ -6,12 +6,12 @@ LC 1207 -//Unique Number of Occurrences
 LC 169 - //Majority Element
 LC 136 - //Single Number
 LC 268 - //Missing Number
-LC 389 - Find the Difference
-LC 645 - Set Mismatch
-LC 383 - Ransom Note
-Hashing / Frequency Counting (Level 2)
-LC 1 - ///Two Sum////////
-LC 219 - Contains Duplicate II
+LC 389 - //Find the Difference
+LC 645 - //Set Mismatch
+LC 383 - //Ransom Note
+Hashing = Frequency Counting (Level 2)
+LC 1 -   //Two Sum////////
+LC 219 - //Contains Duplicate II
 LC 594 - Longest Harmonious Subsequence
 LC 599 - Minimum Index Sum of Two Lists
 LC 1002 - Find Common Characters
