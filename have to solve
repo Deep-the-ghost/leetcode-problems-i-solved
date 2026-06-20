@@ -12,8 +12,8 @@ LC 383 - //Ransom Note
 Hashing = Frequency Counting (Level 2)
 LC 1 -   //Two Sum////////
 LC 219 - //Contains Duplicate II
-LC 594 - Longest Harmonious Subsequence
-LC 599 - Minimum Index Sum of Two Lists
+LC 594 - //Longest Harmonious Subsequence
+LC 599 - //Minimum Index Sum of Two Lists
 LC 1002 - Find Common Characters
 LC 884 - Uncommon Words from Two Sentences
 LC 205 - Isomorphic Strings
