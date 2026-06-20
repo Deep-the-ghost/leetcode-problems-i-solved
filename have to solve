@@ -2,10 +2,10 @@ Hashing / Frequency Counting (Level 1)
 LC 217 - //Contains Duplicate
 LC 242 - //Valid Anagram
 LC 349 - //Intersection of Two Arrays
-LC 1207 - //Unique Number of Occurrences
-LC 169 - Majority Element
-LC 136 - Single Number
-LC 268 - Missing Number
+LC 1207 -//Unique Number of Occurrences
+LC 169 - //Majority Element
+LC 136 - //Single Number
+LC 268 - //Missing Number
 LC 389 - Find the Difference
 LC 645 - Set Mismatch
 LC 383 - Ransom Note
