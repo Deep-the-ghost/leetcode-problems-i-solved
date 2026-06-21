@@ -28,8 +28,20 @@ For each next word:
 
 Time:
 ~6 hours
----------------------------------------------
+-------------------------------------------------------------
 LC 884 - Uncommon Words from Two Sentences
+Pattern: HashMap / Frequency Counting
+
+Key Idea:
+
+Split both sentences into words.
+Count frequency of every word from both sentences.
+Return words whose frequency is exactly 1.
+
+Important Python Syntax:
+
+words = sentence.split()
+-----------------------------------------------------------------
 LC 205 - Isomorphic Strings
 LC 290 - Word Pattern
 LC 451 - Sort Characters By Frequency
