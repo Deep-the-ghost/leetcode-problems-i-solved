@@ -85,6 +85,32 @@ Time:
 O(n)
 __________________________________________________________________________
 LC 451 - Sort Characters By Frequency
+Pattern:
+Frequency HashMap + Sorting
+
+Key Idea:
+1. Count frequency of each character.
+2. Convert hashmap to list of (char, freq).
+3. Sort by frequency descending.
+4. Rebuild the string.
+
+Example:
+tree
+
+Count:
+t -> 1
+r -> 1
+e -> 2
+
+Sorted:
+e -> 2
+t -> 1
+r -> 1
+
+Answer:
+eetr
+
+__________________________________________________________________________
 LC 387 - First Unique Character in a String
 
 By problem 20, hash maps will feel natural.
