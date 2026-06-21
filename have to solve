@@ -42,7 +42,7 @@ Important Python Syntax:
 
 words = sentence.split()
 -----------------------------------------------------------------
-LC 205 - Isomorphic Strings
+LC 205 - //Isomorphic Strings
 205. Isomorphic Strings
 
 Pattern:
@@ -63,6 +63,27 @@ HashMaps can represent relationships, not just frequencies.
 ______________________________________________________________________
 
 LC 290 - Word Pattern
+290. Word Pattern
+
+Pattern:
+HashMap Mapping / Bijection
+
+Key Idea:
+Each pattern character maps to exactly one word.
+Each word maps to exactly one pattern character.
+
+Examples:
+abba -> dog cat cat dog   ✓
+abba -> dog dog dog dog   ✗
+abba -> dog cat cat fish  ✗
+
+Learned:
+Same pattern as Isomorphic Strings.
+Character ↔ Word instead of Character ↔ Character.
+
+Time:
+O(n)
+__________________________________________________________________________
 LC 451 - Sort Characters By Frequency
 LC 387 - First Unique Character in a String
 
