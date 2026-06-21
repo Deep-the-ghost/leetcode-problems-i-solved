@@ -29,7 +29,7 @@ For each next word:
 Time:
 ~6 hours
 -------------------------------------------------------------
-LC 884 - Uncommon Words from Two Sentences
+LC 884 - //Uncommon Words from Two Sentences
 Pattern: HashMap / Frequency Counting
 
 Key Idea:
@@ -43,6 +43,25 @@ Important Python Syntax:
 words = sentence.split()
 -----------------------------------------------------------------
 LC 205 - Isomorphic Strings
+205. Isomorphic Strings
+
+Pattern:
+Two-Way HashMap / Bijection
+
+Key Idea:
+Every character in s maps to exactly one character in t.
+Every character in t maps to exactly one character in s.
+
+Observation:
+The reverse mapping is the inverse of the forward mapping.
+
+Time:
+O(n)
+
+Learned:
+HashMaps can represent relationships, not just frequencies.
+______________________________________________________________________
+
 LC 290 - Word Pattern
 LC 451 - Sort Characters By Frequency
 LC 387 - First Unique Character in a String
