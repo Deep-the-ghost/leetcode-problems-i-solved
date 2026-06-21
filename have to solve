@@ -14,7 +14,21 @@ LC 1 -   //Two Sum////////
 LC 219 - //Contains Duplicate II
 LC 594 - //Longest Harmonious Subsequence
 LC 599 - //Minimum Index Sum of Two Lists
-LC 1002 - Find Common Characters
+--------------------------------------------------
+LC 1002 - //Find Common Characters
+
+Pattern:
+Frequency HashMap
+
+Key Idea:
+Store counts of first word.
+For each next word:
+    build frequency map
+    keep minimum frequency of common chars
+
+Time:
+~6 hours
+---------------------------------------------
 LC 884 - Uncommon Words from Two Sentences
 LC 205 - Isomorphic Strings
 LC 290 - Word Pattern
