@@ -246,7 +246,40 @@ Time: O(n)
 Space: O(n)
 _________________________________________________________________________________
 LC 2011 - Final Value of Variable After Operations
+Pattern:
+Array Traversal / Simulation
+
+Logic:
+Start x = 0.
+
+Traverse operations:
+    "--X" or "X--" -> x -= 1
+    "++X" or "X++" -> x += 1
+
+Return x.
+
+Time: O(n)
+Space: O(1)
+___________________________________________________________________________________
 LC 485 - Max Consecutive Ones
+Pattern:
+Array Traversal / Counting Streaks
+
+Logic:
+Traverse array.
+
+If current number is 1:
+    increase current streak count.
+
+If current number is 0:
+    update maximum streak.
+    reset current streak to 0.
+
+Return maximum streak.
+
+Time: O(n)
+Space: O(1)
+__________________________________________________________
 LC 724 - Find Pivot Index
 LC 414 - Third Maximum Number
 LC 121 - Best Time to Buy and Sell Stock
