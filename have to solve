@@ -143,9 +143,48 @@ Answer:
 By problem 20, hash maps will feel natural.
 
 Array Traversal / Simulation (25 Problems)
-LC 1920 - Build Array from Permutation
+LC 1920 - //Build Array from Permutation
+If the problem says:
+"Build a new array using values from another array"
+
+Think:
+→ Simple traversal
+→ Direct simulation
+→ No special algorithm needed
+____________________________________________________________________________
 LC 1480 - Running Sum of 1D Array
+1480. Running Sum of 1D Array
+
+Pattern:
+Prefix Sum / Array Traversal
+
+Logic:
+Keep a running total (curr).
+Add current number to curr.
+Append curr to answer.
+
+Time: O(n)
+Space: O(n)
+
+--------------------------------------------------------------------------
+
 LC 1672 - Richest Customer Wealth
+1672. Richest Customer Wealth
+
+Pattern:
+2D Array Traversal
+
+Logic:
+For each row (customer):
+    calculate row sum
+
+Keep track of maximum row sum.
+
+Return maximum wealth.
+
+Time: O(m*n)
+Space: O(1)
+____________________________________________________________________________
 LC 1431 - Kids With Greatest Number of Candies
 LC 1929 - Concatenation of Array
 LC 1470 - Shuffle the Array
