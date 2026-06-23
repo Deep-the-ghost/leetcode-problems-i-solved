@@ -186,8 +186,65 @@ Time: O(m*n)
 Space: O(1)
 ____________________________________________________________________________
 LC 1431 - Kids With Greatest Number of Candies
+LC 1431 - Kids With the Greatest Number of Candies
+
+Pattern:
+Array Traversal
+
+Logic:
+Find maximum candies.
+
+For each kid:
+    if candies[i] + extraCandies >= maximum
+        True
+    else
+        False
+
+Store result in answer array.
+
+Time: O(n)
+Space: O(n)
+____________________________________________________________________________________
 LC 1929 - Concatenation of Array
+LC 1929 - Concatenation of Array
+
+Pattern:
+Array Traversal
+
+Logic:
+Create answer array of size 2*n.
+
+For each index i:
+    ans[i] = nums[i]
+    ans[i+n] = nums[i]
+
+Return ans.
+
+Time: O(n)
+Space: O(n)
+__________________________________________________________________________________
 LC 1470 - Shuffle the Array
+LC 1470 - Shuffle the Array
+
+Pattern:
+Array Traversal / Two Pointers
+
+Logic:
+First half = x values
+Second half = y values
+
+i = 0
+j = n
+
+Place:
+x1,y1,x2,y2,...
+
+Even index -> take from i
+Odd index -> take from j
+
+Time: O(n)
+Space: O(n)
+_________________________________________________________________________________
 LC 2011 - Final Value of Variable After Operations
 LC 485 - Max Consecutive Ones
 LC 724 - Find Pivot Index
