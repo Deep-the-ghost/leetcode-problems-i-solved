@@ -374,6 +374,18 @@ Key Insight
 A negative running sum hurts future sums, so sometimes it's better to start a new subarray.
 _______________________________________________________________________________________________
 LC 66 - Plus One
+LeetCode 66 - Plus One
+
+Idea
+
+Convert the digit array into a number.
+Add 1.
+Convert the result back into a digit array.
+
+Pattern
+
+Array ↔ Number conversion.
+_______________________________________________________________________
 LC 27 - Remove Element
 LC 26 - Remove Duplicates from Sorted Array
 LC 283 - Move Zeroes
