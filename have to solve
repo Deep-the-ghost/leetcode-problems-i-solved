@@ -387,6 +387,22 @@ Pattern
 Array ↔ Number conversion.
 _______________________________________________________________________
 LC 27 - Remove Element
+### LeetCode 27 - Remove Element
+
+* Traverse the array and keep elements not equal to `val`.
+* Count valid elements (`k`).
+* Place valid elements at the beginning of `nums`.
+* Return `k`.
+
+**Pattern:** Array Filtering
+
+**Complexity:** `O(n)` time, `O(n)` space
+
+**Key Insight:**
+
+> Keep what you need, ignore what you don't.
+
+____________________________________________________________________
 LC 26 - Remove Duplicates from Sorted Array
 LC 283 - Move Zeroes
 LC 905 - Sort Array By Parity
