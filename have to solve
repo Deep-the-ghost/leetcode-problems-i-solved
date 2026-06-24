@@ -281,9 +281,98 @@ Time: O(n)
 Space: O(1)
 __________________________________________________________
 LC 724 - Find Pivot Index
+724. Find Pivot Index
+
+Pattern: Prefix Sum
+
+leftSum[i]  = sum of elements before i
+rightSum[i] = sum of elements after i
+
+Build leftSum from left to right.
+Build rightSum from right to left.
+
+If leftSum[i] == rightSum[i]:
+    return i
+
+Else return -1
+
+Current Complexity:
+Time  O(n)
+Space O(n)
+
+Optimized:
+Time  O(n)
+Space O(1)
+__________________________________________________________________
 LC 414 - Third Maximum Number
+LeetCode 414 - Third Maximum Number
+Use a hashmap to get distinct numbers.
+If distinct numbers < 3, return the maximum.
+Put hashmap keys into a list and sort it.
+Return the 3rd largest element.
+
+Learnings:
+
+dict.items() → (key, value) tuples.
+lambda x: x[1] sorts by the second element.
+Integers can't use indexing (x[1]).
+Distinct maximum ≠ most frequent.
+
+Complexity: O(n + k log k) where k is the number of distinct elements.
+______________________________________________________________________
 LC 121 - Best Time to Buy and Sell Stock
+### LeetCode 121 - Best Time to Buy and Sell Stock
+
+**Idea:**
+
+* Keep track of the minimum price seen so far.
+* For each day, calculate the profit if sold today.
+* Update the maximum profit found.
+
+**Pattern:**
+
+* Carry forward useful information (`min_price_so_far`).
+* Avoid checking all pairs of days.
+
+**Learning:**
+
+* Nested loops can often be reduced to one loop by storing previous information.
+* Ask: *"What is the only thing I need from the past?"*
+
+**Complexity:**
+
+* Time: `O(n)`
+* Space: `O(1)`
+
+**Key Insight:**
+
+> Maximum profit at day `i` = `price[i] - minimum_price_seen_before_i` 🚀
+________________________________________________________________________________
 LC 53 - Maximum Subarray
+LeetCode 53 - Maximum Subarray
+
+Idea
+
+At each element, choose:
+Extend previous subarray: current_sum + num
+Start new subarray: num
+Take the larger one as current_sum.
+Track the maximum value of current_sum in best_sum.
+
+Pattern
+
+Dynamic Programming / Kadane's Algorithm
+Carry forward the best subarray ending at the current index.
+
+Complexity
+
+Time: O(n)
+Space: O(1)
+
+Key Insight
+
+A negative running sum hurts future sums, so sometimes it's better to start a new subarray.
+_______________________________________________________________________________________________
 LC 66 - Plus One
 LC 27 - Remove Element
 LC 26 - Remove Duplicates from Sorted Array
@@ -297,6 +386,7 @@ LC 747 - Largest Number At Least Twice of Others
 LC 830 - Positions of Large Groups
 LC 941 - Valid Mountain Array
 LC 989 - Add to Array Form of Integer
+________________________________________________________________________________
 Two Pointers (25 Problems)
 LC 344 - Reverse String
 LC 125 - Valid Palindrome
