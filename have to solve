@@ -453,7 +453,47 @@ ________________________________________________________________________________
 
 
 LC 628 - Maximum Product of Three Numbers
+### LC 628 - Maximum Product of Three Numbers
+
+* Sort the array.
+* Compare:
+
+  * Product of the **three largest** numbers.
+  * Product of the **two smallest (most negative)** and the **largest** number.
+* Return the larger product.
+
+**Pattern:** Sorting + Greedy
+
+**Complexity:** `O(n log n)` time, `O(n)` space (using `sorted()`)
+
+**Key Insight:**
+
+> Two large negative numbers can produce a larger positive product than the three largest positive numbers.
+
+______________________________________________________________________________________________________________
 LC 643 - Maximum Average Subarray I
+Nice work. You discovered the **Sliding Window** optimization yourself, which is one of the most important array techniques.
+
+### LC 643 - Maximum Average Subarray I
+
+**Note:**
+
+* Compute the sum of the first `k` elements.
+* Slide the window by **subtracting the left element** and **adding the new right element**.
+* Keep two variables:
+
+  * `curr_sum` → current window sum.
+  * `max_sum` → largest sum seen so far.
+* Return `max_sum / k`.
+
+**Pattern:** Sliding Window
+
+**Time:** `O(n)`
+**Space:** `O(1)`
+
+This is a fundamental pattern that appears in many LeetCode problems, so it's worth remembering well.
+
+_______________________________________________________________________________________________________________
 LC 747 - Largest Number At Least Twice of Others
 LC 830 - Positions of Large Groups
 LC 941 - Valid Mountain Array
