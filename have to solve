@@ -404,10 +404,54 @@ LC 27 - Remove Element
 
 ____________________________________________________________________
 LC 26 - Remove Duplicates from Sorted Array
+LC 26 - Remove Duplicates from Sorted Array
+Keep only unique elements.
+Place them at the beginning of the array.
+Return the count of unique elements.
+
+Pattern: Duplicate Removal
+Complexity: O(n) time, O(1) space (optimal)
+____________________________________________________
 LC 283 - Move Zeroes
+LC 283 - Move Zeroes
+Move all non-zero elements to the front.
+Fill remaining positions with 0.
+Maintain the relative order of non-zero elements.
+
+Pattern: Array Rearrangement
+Complexity: O(n) time, O(1) space (optimal)
+_____________________________________________________
 LC 905 - Sort Array By Parity
+LC 905 - Sort Array By Parity
+Place all even numbers before odd numbers.
+Relative order is not important.
+
+Pattern: Array Partitioning
+Complexity: O(n) time, O(1) space (optimal)
+______________________________________________________
 LC 1089 - Duplicate Zeros
+LC 1089 - Duplicate Zeros
+Duplicate every 0 while keeping the array size fixed.
+Shift elements to the right as needed.
+
+Pattern: Array Modification
+Complexity: O(n) time, O(1) space (optimal)
+______________________________________________________
 LC 561 - Array Partition
+LC 561 - Array Partition
+Sort the array.
+Pair adjacent elements.
+Sum every first element of each pair.
+
+Pattern: Greedy + Sorting / Counting Sort
+Complexity: O(n log n) with sorting, O(n + k) with counting sort.
+
+Key Insight:
+
+After sorting, the answer is the sum of every alternate element (indices 0, 2, 4, ...).
+______________________________________________________________________________________________________________
+
+
 LC 628 - Maximum Product of Three Numbers
 LC 643 - Maximum Average Subarray I
 LC 747 - Largest Number At Least Twice of Others
