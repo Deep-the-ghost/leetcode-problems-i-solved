@@ -623,6 +623,26 @@ LC 392 - Is Subsequence
 
 ____________________________________________________________________________________________
 LC 977 - Squares of a Sorted Array
+### LC 977 – Squares of a Sorted Array
+
+**Approach (Your Solution)**
+
+* Traverse the array and square every element.
+* Sort the squared array.
+* Return the sorted array.
+
+**Time Complexity:** `O(n log n)` (because of sorting)
+**Space Complexity:** `O(1)` extra (excluding the output/sort implementation)
+
+**Key Learning**
+
+* Squaring negative numbers changes their order (e.g., `[-4, -1, 0, 3] → [16, 1, 0, 9]`), so sorting is needed afterward.
+* This solution is simple and valid.
+* An optimized solution uses **two pointers** (`left` and `right`) to achieve **O(n)** time by comparing absolute values from both ends and filling the answer array from the back.
+
+**Pattern:** Array + Sorting → Later upgrade to **Two Pointers**.
+
+_______________________________________________________________________________________________
 LC 88 - Merge Sorted Array
 LC 1768 - Merge Strings Alternately
 LC 345 - Reverse Vowels of a String
