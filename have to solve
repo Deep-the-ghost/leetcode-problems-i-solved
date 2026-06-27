@@ -644,6 +644,24 @@ LC 977 - Squares of a Sorted Array
 
 _______________________________________________________________________________________________
 LC 88 - Merge Sorted Array
+LC 88 – Merge Sorted Array
+
+Approach (Your Solution)
+
+Copy all elements of nums2 into the unused positions of nums1.
+Sort nums1.
+Write the sorted values back into nums1.
+
+Time Complexity: O((m+n) log(m+n))
+Space Complexity: O(m+n) (using sorted())
+
+Key Learning
+
+Since both arrays are already sorted, sorting again is unnecessary.
+The optimal solution uses three pointers (i, j, k) from the end to merge in O(m+n) time and O(1) space.
+
+Pattern: Merge Sorted Arrays → Two Pointers (from the end).
+_____________________________________________________________________________________________________________________
 LC 1768 - Merge Strings Alternately
 LC 345 - Reverse Vowels of a String
 LC 844 - Backspace String Compare
