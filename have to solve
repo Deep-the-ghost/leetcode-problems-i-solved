@@ -576,8 +576,52 @@ ________________________________________________________________________________
 ________________________________________________________________________________
 Two Pointers (25 Problems)
 LC 344 - Reverse String
+### LC 344 - Reverse String
+
+**Note:**
+
+* Use the **Two Pointers** technique.
+* Swap the first and last characters, then move both pointers inward.
+* Stop after reaching the middle of the array.
+* Reverse **in-place** using a temporary variable.
+
+**Pattern:** Two Pointers
+**Time:** `O(n)`
+**Space:** `O(1)`
+
+_____________________________________________________________________________________
 LC 125 - Valid Palindrome
+### LC 125 - Valid Palindrome
+
+**Note:**
+
+* Create a new string containing only **letters and digits** using `isalnum()`.
+* Convert the string to **lowercase** using `lower()`.
+* Compare characters from both ends (or compare with its reverse).
+* If any pair differs, return `False`; otherwise return `True`.
+
+**Pattern:** String + Two Pointers
+**Time:** `O(n)`
+**Space:** `O(n)` *(because a new filtered string is created)*
+
+**Functions learned:**
+
+* `ch.isalnum()` → checks if a character is a letter or digit.
+* `s.lower()` → converts uppercase letters to lowercase.
+__________________________________________________________________________________
 LC 392 - Is Subsequence
+### LC 392 - Is Subsequence
+
+* Use **two pointers** (`i` for `s`, `j` for `t`).
+* If characters match, move **both** pointers.
+* Otherwise, move only `j`.
+* If `i == len(s)` → `True`, else `False`.
+
+**Time:** `O(n)`
+**Space:** `O(1)`
+**Pattern:** Two Pointers
+
+____________________________________________________________________________________________
 LC 977 - Squares of a Sorted Array
 LC 88 - Merge Sorted Array
 LC 1768 - Merge Strings Alternately
