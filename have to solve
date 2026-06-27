@@ -495,8 +495,60 @@ This is a fundamental pattern that appears in many LeetCode problems, so it's wo
 
 _______________________________________________________________________________________________________________
 LC 747 - Largest Number At Least Twice of Others
+### LC 747 - Largest Number At Least Twice of Others
+
+**Note:**
+
+* Find the **maximum element** and its **index**.
+* Check every other number:
+
+  * If `num * 2 > max`, return `-1`.
+* Otherwise, return the index of the maximum.
+
+**Pattern:** Array Traversal + Maximum Tracking
+
+**Time:** `O(n)`
+**Space:** `O(1)` (or `O(n)` if using a hashmap for the index, as in your solution)
+
+_______________________________________________________________________________________________
 LC 830 - Positions of Large Groups
+### LC 830 - Positions of Large Groups
+
+**Note:**
+
+* Traverse the string while tracking the **current character**, **start index**, and **count**.
+* When the character changes (or reach the end), if `count >= 3`, store `[start, end]`.
+* Reset the count and start index for the new group.
+
+**Pattern:** Two Pointers / String Traversal
+
+**Time:** `O(n)`
+**Space:** `O(1)` (excluding the output list)
+
+____________________________________________________________________________________________
 LC 941 - Valid Mountain Array
+### LC 941 – Valid Mountain Array
+
+**Note:**
+
+* Check edge cases first:
+
+  * `n >= 3`
+  * First two must be increasing.
+  * Last two must be decreasing.
+* Find the peak by ensuring the array **strictly increases then strictly decreases**.
+* No equal adjacent elements are allowed.
+* Peak cannot be the first or last element.
+* **Time:** `O(n)` **Space:** `O(1)`
+
+**Alternative Idea (Two Pointers):**
+
+* Move `i` from the left until the increase stops.
+* Move `j` from the right until the decrease stops.
+* If `i == j` and the peak is **not** at either end, it's a valid mountain.
+
+This is a nice note to remember both the standard approach and your own two-pointer idea.
+_______________________________________________________________________________________________________
 LC 989 - Add to Array Form of Integer
 ________________________________________________________________________________
 Two Pointers (25 Problems)
