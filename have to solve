@@ -550,6 +550,29 @@ LC 941 - Valid Mountain Array
 This is a nice note to remember both the standard approach and your own two-pointer idea.
 _______________________________________________________________________________________________________
 LC 989 - Add to Array Form of Integer
+### **LC 989 - Add to Array-Form of Integer**
+
+**Pattern:** Digit-by-Digit Addition (Carry)
+
+* Start from the last digit of `num`.
+* Add the last digit of `k` using `k % 10`.
+* Maintain a `carry` during addition.
+* Append `carry % 10` to the answer.
+* Update `carry = carry // 10`.
+* Remove the last digit of `k` using `k //= 10`.
+* Continue while `i >= 0` **or** `k > 0` **or** `carry > 0`.
+* Reverse the answer at the end.
+
+**Time Complexity:** `O(max(n, digits(k)))`
+**Space Complexity:** `O(max(n, digits(k)))`
+
+**Key Insight:**
+Treat the array and `k` as two numbers and perform **elementary-school addition from right to left**. Reuse `carry` to store both the current sum and the carry for the next iteration.
+
+________________________________________________________________________________
+--------------------------------------------------------------------------------
+________________________________________________________________________________ yo next target 2 pointer 
+--------------------------------------------------------------------------------
 ________________________________________________________________________________
 Two Pointers (25 Problems)
 LC 344 - Reverse String
