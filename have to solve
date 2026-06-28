@@ -663,7 +663,33 @@ The optimal solution uses three pointers (i, j, k) from the end to merge in O(m+
 Pattern: Merge Sorted Arrays → Two Pointers (from the end).
 _____________________________________________________________________________________________________________________
 LC 1768 - Merge Strings Alternately
+# Approach:
+# Use two pointers to traverse both strings simultaneously.
+# Append one character from each string alternately.
+# If one string is longer, append its remaining characters at the end.
+#
+# Time Complexity: O(n + m)
+# Space Complexity: O(n + m)
+_____________________________________________________________________________________________________________
 LC 345 - Reverse Vowels of a String
+# Approach:
+# Use the Two Pointer technique to reverse only the vowels.
+# Start one pointer from the left and another from the right.
+# - If both characters are not vowels, move both pointers.
+# - If only the left character is a vowel, move the right pointer.
+# - If only the right character is a vowel, move the left pointer.
+# - If both are vowels, swap them and move both pointers.
+#
+# Since Python strings are immutable, convert the string to a list
+# before swapping characters. Finally, join the list back into a string.
+#
+# Time Complexity: O(n)
+# Space Complexity: O(n)   # because of the character list
+#
+# Key Learning:
+# Two pointers are ideal when processing or swapping elements
+# from both ends of a sequence while avoiding unnecessary traversals.
+_______________________________________________________________________________________
 LC 844 - Backspace String Compare
 LC 680 - Valid Palindrome II
 LC 283 - Move Zeroes
