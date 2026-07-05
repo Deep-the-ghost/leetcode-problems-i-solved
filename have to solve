@@ -691,9 +691,35 @@ LC 345 - Reverse Vowels of a String
 # from both ends of a sequence while avoiding unnecessary traversals.
 _______________________________________________________________________________________
 LC 844 - Backspace String Compare
+Using Stack
+The idea here is to use the inherent nature of stacks to simulate the backspace operation.
+
+Iterate through each character of the string.
+If the character isn't #, it's pushed onto the stack.
+If the character is # and the stack isn't empty, the top element (last typed character) is popped (i.e., "erased").
+After processing, the contents of the stacks for both strings are compared.
+______________________________________________________________________________________________________________
 LC 680 - Valid Palindrome II
+cheated
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 LC 283 - Move Zeroes
+create an araay [0]*n then put the numbers first then copy the array to the main
+__________________________________________________________________________________________________________________
 LC 167 - Two Sum II
+LeetCode 167 – Two Sum II (Input Array Is Sorted)
+Pattern
+
+Two Pointers
+
+Key Observation
+
+The array is already sorted, so we don't need a hash map.
+
+Idea
+Place one pointer at the beginning (i).
+Place the other at the end (j).
+Compute:
+________________________________________________________________________________________________________________
 LC 11 - Container With Most Water
 LC 15 - 3Sum
 LC 75 - Sort Colors
