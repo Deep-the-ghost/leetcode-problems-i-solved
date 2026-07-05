@@ -721,6 +721,20 @@ Place the other at the end (j).
 Compute:
 ________________________________________________________________________________________________________________
 LC 11 - Container With Most Water
+LeetCode 11 – Container With Most Water
+Pattern
+
+Two Pointers + Greedy
+
+Idea
+Place one pointer at the beginning and one at the end.
+
+Calculate the current area:
+
+Area = min(leftHeight, rightHeight) × (right - left)
+Keep track of the maximum area.
+Move the pointer pointing to the smaller height, because only a taller line can potentially increase the area.
+_____________________________________________________________________________________________________________
 LC 15 - 3Sum
 LC 75 - Sort Colors
 LC 18 - 4Sum
