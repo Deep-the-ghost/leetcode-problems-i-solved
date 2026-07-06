@@ -736,7 +736,58 @@ Keep track of the maximum area.
 Move the pointer pointing to the smaller height, because only a taller line can potentially increase the area.
 _____________________________________________________________________________________________________________
 LC 15 - 3Sum
+LeetCode 15 — 3Sum (Medium)
+
+Pattern: Sorting + Two Pointers
+
+What I learned:
+
+My first brute-force idea (i + j + search k) worked logically but resulted in O(n³) and TLE.
+Sorting the array made it possible to use the Two Pointer technique.
+Fix one element i, then use left and right to find the remaining two numbers.
+If the sum is too small, move left; if too large, move right; if equal, record the triplet and continue.
+Duplicate triplets can be removed using a set, but the optimal approach is to skip duplicate values while traversing, avoiding extra space.
+
+Complexity:
+
+My accepted solution: O(n²) time, O(k) extra space (set).
+Optimal solution: O(n²) time, O(1) extra space (excluding output).
+
+Takeaway:
+
+This problem taught me how replacing an inner loop with the Two Pointer technique can reduce complexity from O(n³) to O(n²). It also reinforced that preventing duplicate generation is more efficient than removing duplicates afterward.
+
+Personal Achievement:
+
+Solved the problem by progressively improving my own approach—from brute force, to identifying bottlenecks, to building a working two-pointer solution—before studying the fully optimized version. This strengthened my algorithmic thinking rather than relying on memorization.
+_______________________________________________________________________________________________________________________________________________________________________________________________________________________
 LC 75 - Sort Colors
+## **LeetCode 75 – Sort Colors (Medium)**
+
+**Pattern:** Array Manipulation | Partitioning (Dutch National Flag)
+
+**What I learned:**
+
+* My first accepted solution was based on **Selection Sort**. For each index, I searched for the smallest remaining element and swapped it into place.
+* This approach works correctly but takes **O(n²)** time.
+* The problem has a special constraint: the array contains only **0, 1, and 2**.
+* Because there are only three distinct values, the array can be **partitioned** instead of generally sorted.
+* The optimal solution is the **Dutch National Flag Algorithm**, which uses three pointers (`low`, `mid`, `high`) to place 0s, 1s, and 2s in one pass.
+
+**Complexity:**
+
+* My solution: **O(n²)** time, **O(1)** space.
+* Optimal solution: **O(n)** time, **O(1)** space.
+
+**Takeaway:**
+
+> Always pay attention to problem constraints. If the input has only a few distinct values, there may be a specialized linear-time algorithm instead of a general sorting algorithm.
+
+**Personal Achievement:**
+
+> Solved the problem independently using a Selection Sort approach before exploring optimizations. This reinforced the habit of first building a correct solution, then improving its efficiency based on the problem's constraints rather than memorizing the optimal algorithm.
+
+______________________________________________________________________________________________________________________________________________________________________________________________
 LC 18 - 4Sum
 LC 42 - Trapping Rain Water
 LC 881 - Boats to Save People
