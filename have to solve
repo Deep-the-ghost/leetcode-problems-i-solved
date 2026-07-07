@@ -789,6 +789,77 @@ LC 75 - Sort Colors
 
 ______________________________________________________________________________________________________________________________________________________________________________________________
 LC 18 - 4Sum
+### LeetCode 18 — 4Sum (Notes)
+
+**Pattern:** Sorting + Two Pointers + Nested Loops
+
+---
+
+### Key Idea
+
+* Sort the array.
+* Fix the **first** number (`i`).
+* Fix the **second** number (`j`).
+* Use **two pointers** (`left` and `right`) to find the remaining two numbers.
+
+---
+
+### Algorithm
+
+1. Sort the array.
+2. Loop `i` from `0` to `n-4`.
+3. Loop `j` from `i+1` to `n-3`.
+4. Set:
+
+   ```python
+   left = j + 1
+   right = n - 1
+   ```
+5. While `left < right`:
+
+   * Compute the sum.
+   * If `sum == target`:
+
+     * Save the quadruplet.
+     * Move both pointers.
+     * Skip duplicates.
+   * If `sum < target`:
+
+     * `left += 1`
+   * If `sum > target`:
+
+     * `right -= 1`
+
+---
+
+### Important Lessons
+
+* **Never move all four pointers together.**
+* `left` and `right` must be **reset for every new `j`**.
+* Since the array is sorted, **do not sort each quadruplet** before storing it.
+* Avoid `if squad not in ans`; instead, **skip duplicate values** while iterating.
+
+---
+
+### Complexity
+
+* **Time:** `O(n³)`
+* **Space:** `O(1)` (excluding the output list)
+
+---
+
+### Interview Pattern
+
+This is simply **3Sum + one extra loop**.
+
+```
+2Sum  → Two Pointers
+3Sum  → One loop + Two Pointers
+4Sum  → Two loops + Two Pointers
+```
+
+**Takeaway:** Whenever you need to find **k numbers** in a sorted array, think about **fixing `k-2` numbers and solving the remaining `2Sum` using two pointers.**
+_____________________________________________________________________________________________________________________________________________________________________
 LC 42 - Trapping Rain Water
 LC 881 - Boats to Save People
 LC 977 - Squares of a Sorted Array (re-solve)
