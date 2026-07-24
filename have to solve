@@ -862,6 +862,25 @@ This is simply **3Sum + one extra loop**.
 _____________________________________________________________________________________________________________________________________________________________________
 LC 42 - Trapping Rain Water
 LC 881 - Boats to Save People
+class Solution:
+    def numRescueBoats(self, people: List[int], limit: int) -> int:
+        nums = sorted(people)
+        n = len(people)
+        i = 0
+        j = n-1
+        count = 0
+
+        while i < j :
+            if nums[j] + nums[i] <= limit:
+                i+=1
+            j-=1
+            count += 1
+        if i == j :
+            count += 1
+
+        return count                
+
+______________________________________________________________________________________________________________________
 LC 977 - Squares of a Sorted Array (re-solve)
 LC 948 - Bag of Tokens
 LC 986 - Interval List Intersections
