@@ -968,6 +968,13 @@ class Solution:
         return output            
 ______________________________________________________________________________________________________________________
 LC 151 - Reverse Words in a String
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        s = s.strip()
+        words = s.split()
+        reversed_words = words[::-1]
+        return ' '.join(reversed_words)
+________________________________________________________________________________________________________________________
 LC 165 - Compare Version Numbers
 LC 557 - Reverse Words in a String III
 LC 2108 - First Palindromic String
