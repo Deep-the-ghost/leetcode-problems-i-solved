@@ -976,6 +976,39 @@ class Solution:
         return ' '.join(reversed_words)
 ________________________________________________________________________________________________________________________
 LC 165 - Compare Version Numbers
+class Solution:
+    def compareVersion(self, version1: str, version2: str) -> int:
+        version1 = version1.split(".")
+        version2 = version2.split(".")
+
+        n1 = len(version1)
+        n2 = len(version2)
+        n = max(n1,n2)
+        
+        for i in range(n):
+            if i < n1:
+                v1 = int(version1[i])
+            else:
+                v1 = 0
+
+            if i < n2:
+                v2 = int(version2[i])
+            else:
+                v2 = 0
+
+            if v1 < v2 :
+                return -1
+                break
+            if v1 > v2 :
+                return 1
+                break
+        else:
+            return 0                            
+
+
+
+
+___________________________________________________________________________________________________________________
 LC 557 - Reverse Words in a String III
 LC 2108 - First Palindromic String
 LC 2540 - Minimum Common Value
