@@ -1010,8 +1010,57 @@ class Solution:
 
 ___________________________________________________________________________________________________________________
 LC 557 - Reverse Words in a String III
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        s = s.split()
+        n = len(s)
+        for i in range(n):
+            s[i] = s[i][::-1]
+        return " ".join(s)
+_______________________________________________________________________
 LC 2108 - First Palindromic String
+class Solution:
+    def firstPalindrome(self, words: List[str]) -> str:
+        n = len(words)
+        for k in range(n):
+            l = len(words[k])
+            i = 0
+            j = l-1
+            while i <= j :
+                if words[k][i] != words[k][j]:
+                    break
+                else:
+                    i += 1
+                    j -= 1
+            else:
+                return words[k]
+                break
+        else:
+            return ""        
+
+
+________________________________________________________________________________________________________
 LC 2540 - Minimum Common Value
+class Solution:
+    def getCommon(self, nums1: List[int], nums2: List[int]) -> int:
+        n1 = len(nums1)
+        n2 = len(nums2)
+        i = 0
+        j = 0
+        while i < n1 and j < n2:
+            if nums1[i] == nums2[j]:
+                return nums1[i]
+                break
+            elif nums1[i] < nums2[j]:
+                i += 1
+            elif nums1[i] > nums2[j]:
+                j += 1
+            else:
+                print("something went wrong in the loop")
+        else :
+            return -1              
+
+________________________________________________________________________________________________
 Pattern 4: Binary Search (20)
 LC 704 - Binary Search
 LC 35 - Search Insert Position
