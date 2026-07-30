@@ -1083,6 +1083,22 @@ class Solution:
         return -1            
 _______________________________________________________________________________________________________
 LC 35 - Search Insert Position
+class Solution:
+    def searchInsert(self, nums: List[int], target: int) -> int:
+        n = len(nums)
+        left = 0
+        right = n - 1
+
+        while left <= right :
+            mid = (left + right) // 2
+            if nums[mid] == target:
+                return mid
+            elif nums[mid] < target:
+                left = mid +1
+            else :
+                right = mid-1
+        else:
+            return left                
 LC 374 - Guess Number Higher or Lower
 LC 69 - Sqrt(x)
 LC 367 - Valid Perfect Square
