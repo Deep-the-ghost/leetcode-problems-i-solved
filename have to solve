@@ -1099,8 +1099,48 @@ class Solution:
                 right = mid-1
         else:
             return left                
+___________________________________________________________________________________________________
 LC 374 - Guess Number Higher or Lower
+how i will call this api 374. Guess Number Higher or Lower
+Easy
+Topics
+premium lock iconCompanies
+
+We are playing the Guess Game. The game is as follows:
+
+I pick a number from 1 to n. You have to guess which number I picked (the number I picked stays the same throughout the game).
+
+Every time you guess wrong, I will tell you whether the number I picked is higher or lower than your guess.
+
+You call a pre-defined API int guess(int num), which returns three possible results:
+
+    -1: Your guess is higher than the number I picked (i.e. num > pick).
+    1: Your guess is lower than the number I picked (i.e. num < pick).
+    0: your guess is equal to the number I picked (i.e. num == pick).
+
+Return the number that I picked.
+
+ __________________________________________________________________________________________________________________________
 LC 69 - Sqrt(x)
+class Solution:
+    def maximum69Number (self, num: int) -> int:
+        num = str(num)
+        k = list(num)
+        high = 0
+
+        for i in range(len(num)):
+            if num[i] =='6':
+                k[i] = '9'
+            j = "".join(k)  
+            if int(j) > int(num) and int(j) > high:
+                high = int(j)
+            k = list(num)
+
+        if high > int(num):
+            return high
+        else:
+            return int(num)         
+______________________________________________________________________________________________________________________
 LC 367 - Valid Perfect Square
 LC 852 - Peak Index in Mountain Array
 LC 744 - Smallest Letter Greater Than Target
