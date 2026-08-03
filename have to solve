@@ -1246,7 +1246,44 @@ class Solution:
         return left + k            
 ---------------------------------------------------------------------------------------
 LC 1351 - Count Negative Numbers
+class Solution:
+    def countNegatives(self, grid: List[List[int]]) -> int:
+        n = len(grid)
+        count = 0
+        for i in range(n):
+            k = len(grid[i])
+            left = 0
+            right = k - 1
+            while left <= right :
+                mid = (left + right)//2
+                if grid[i][mid] < 0:
+                    right = mid - 1
+                elif grid[i][mid] >= 0:
+                    left = mid + 1
+            count += k - left 
+        return count                
+_________________________________________________________________________________________
 LC 1337 - The K Weakest Rows
+class Solution:
+    def kWeakestRows(self, mat: List[List[int]], k: int) -> List[int]:
+        soldiers = []
+        for i in range(len(mat)):
+            j = len(mat[i])
+            left = 0
+            right = j - 1
+            while left <= right:
+                mid = (left+right)//2
+                if mat[i][mid] == 0:
+                    right = mid - 1
+                else:
+                    left = mid + 1
+            soldiers.append((left,i))  
+        soldiers.sort()     
+        res = []
+        for i in range(k):
+            res.append(soldiers[i][1])
+        return res    
+---------------------------------------------------------------------------------------------
 LC 1608 - Special Array
 LC 34 - Find First and Last Position
 LC 33 - Search Rotated Array
