@@ -1285,7 +1285,62 @@ class Solution:
         return res    
 ---------------------------------------------------------------------------------------------
 LC 1608 - Special Array
+class Solution:
+    def specialArray(self, nums: List[int]) -> int:
+        nums = sorted(nums)
+        n = len(nums)
+
+        for i in range(n+1):
+            left = 0
+            right = n - 1
+            ans = n
+            count = 0
+            while left <= right:
+                mid = (left + right)//2
+                if nums[mid] >= i:
+                    ans = mid
+                    right = mid - 1
+                else:
+                    left = mid + 1
+            count = n - ans
+            if count == i:
+                return i
+        return -1                        
+
+
+
+                      
+       
+
+        ----------------------------------------------------------------------------------------
 LC 34 - Find First and Last Position
+class Solution:
+    def searchRange(self, nums: List[int], target: int) -> List[int]:
+            if len(nums) == 0:
+                return [-1,-1]
+            left = 0
+            right = len(nums)-1
+            while left <= right:
+                mid = (left+right)//2
+                if nums[mid] < target:
+                    left = mid + 1
+                else:
+                    right = mid - 1
+
+            if left < len(nums) and nums[left]==target:
+                first = left
+                left = 0
+                right = len(nums) - 1
+                while left <= right:
+                    mid = (left+right)//2
+                    if nums[mid] <= target:
+                        left = mid+1
+                    else:
+                        right = mid - 1
+                last = right
+                return [first,last]   
+            return [-1,-1]                 
+--------------------------------------------------------------------------------------------------
 LC 33 - Search Rotated Array
 LC 153 - Find Minimum Rotated Array
 LC 162 - Find Peak Element
