@@ -1342,7 +1342,54 @@ class Solution:
             return [-1,-1]                 
 --------------------------------------------------------------------------------------------------
 LC 33 - Search Rotated Array
+also use binary search for finding the half part:
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        low = min(nums)
+        n = len(nums)
+        if target >= low and target <= nums[n-1]:
+            left = nums.index(low) 
+            right = n - 1
+            while left <= right:
+                mid = (left+right)//2
+                if nums[mid] < target:
+                    left = mid + 1
+                elif nums[mid] == target:
+                    return mid
+                else:
+                    right = mid - 1
+            else:
+                return -1        
+
+        elif target >= nums[0] and target <= nums[nums.index(low)-1] :
+            left = 0
+            right = nums.index(low) - 1
+            while left <= right:
+                mid = (left+right )//2
+                if nums[mid] == target:
+                    return mid
+                elif nums[mid] < target:
+                    left = mid + 1
+                else:
+                    right = mid - 1
+            else:
+                return -1                
+        else:
+            return -1       
+------------------------------------------------------------------------------------------------
 LC 153 - Find Minimum Rotated Array
+class Solution:
+    def findMin(self, nums: List[int]) -> int:
+        left = 0
+        right = len(nums) - 1
+        while left < right:
+            mid = (left+right)//2
+            if nums[mid] > nums[right]:
+                left = mid + 1
+            else:
+                right = mid
+        return nums[left]          
+---------------------------------------------------------------------------------
 LC 162 - Find Peak Element
 LC 875 - Koko Eating Bananas
 LC 1011 - Capacity To Ship Packages
