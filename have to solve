@@ -1404,6 +1404,23 @@ class Solution:
         return left            
 ---------------------------------------------------------------------------------------
 LC 875 - Koko Eating Bananas
+class Solution:
+    def minEatingSpeed(self, piles: List[int], h: int) -> int:
+        left = 1
+        right = max(piles)
+        while left < right:
+            mid = (left+right)//2
+            hours = 0
+            for num in piles:
+                n = num / mid
+                n = math.ceil(n)
+                hours+= n
+            if hours > h:
+                left = mid + 1
+            else:
+                right = mid 
+        return left                 
+-----------------------------------------------------------------------------------
 LC 1011 - Capacity To Ship Packages
 Pattern 5: Stack (20)
 LC 20 - Valid Parentheses
