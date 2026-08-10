@@ -1449,6 +1449,32 @@ class Solution:
 --------------------------------------------------------------------------------------------
 Pattern 5: Stack (20)
 LC 20 - Valid Parentheses
+class Solution:
+    def isValid(self, s: str) -> bool:
+        stack = []
+        openbrackets = ["(","[","{"]
+        closingbrackets = [")","}","]"]
+        pairs = {
+         ')': '(',
+         ']': '[',
+         '}': '{'
+        }
+
+        for ch in s:
+            if ch in openbrackets:
+                stack.append(ch)
+            if ch in closingbrackets:
+                if len(stack) == 0 or stack[-1] != pairs[ch]:
+                    return False
+                stack.pop()
+
+         
+        if len(stack) != 0:
+            return False
+        return True    
+
+
+--------------------------------------------------------------------------------------------
 LC 682 - Baseball Game
 LC 1047 - Remove Adjacent Duplicates
 LC 1441 - Build Array With Stack Operations
